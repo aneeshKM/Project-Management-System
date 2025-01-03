@@ -1,0 +1,86 @@
+/* General styles for the navbar */
+.nav-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #212121; /* Dark background */
+    transition: width 0.1s;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 100;
+  }
+  
+  .nav-left:hover {
+    width: 200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Logo styling */
+  .logo-link {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  /* Item styling */
+  .item {
+    display: flex;
+    align-items: center;
+    padding-left: 64px;
+    height: 42px;
+    line-height: 42px;
+    color: #deebff;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  
+  .item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .item .icon {
+    margin-right: 12px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  /* Bottom section styling */
+  .bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Item text */
+  .item-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Adding icons */
+  .search-icon::before {
+    content: "🔍";  /* Just an example icon */
+  }
+  
+  .plus-icon::before {
+    content: "➕";  /* Just an example icon */
+  }
+  
+  .help-icon::before {
+    content: "❓";  /* Just an example icon */
+  }
+  

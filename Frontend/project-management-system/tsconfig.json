@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es5",                          // Set target JavaScript version to ES5
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "dom",                                  // Include DOM types for browser environment
+      "dom.iterable",                         // Allow iteration over DOM collections
+      "esnext"                                 // Enable latest ECMAScript features
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "allowJs": true,                           // Allow JavaScript files to be imported
+    "skipLibCheck": true,                      // Skip type checking for declaration files (for faster build)
+    "esModuleInterop": true,                   // Ensures compatibility with CommonJS-style modules
+    "allowSyntheticDefaultImports": true,      // Allows default imports from modules with no default export
+    "strict": true,                            // Enable strict type-checking options
+    "forceConsistentCasingInFileNames": true,  // Ensure consistent casing for file names
+    "noFallthroughCasesInSwitch": true,        // Prevent fallthrough in switch statements
+    "module": "esnext",                        // Use the latest ECMAScript module standard
+    "moduleResolution": "node",                // Resolve modules like Node.js
+    "resolveJsonModule": true,                 // Allow importing JSON files
+    "isolatedModules": true,                   // Ensure each file can be safely transpiled independently
+    "noEmit": true,                            // Do not output files (useful for type-checking only)
+    "jsx": "react-jsx",                        // Enable JSX syntax for React (using React 17 JSX Transform)
+    "baseUrl": "./src",                        // Set base directory for absolute imports
+    "paths": {
+      "shared/*": ["shared/*"]                 // Path alias for shared components (can be adjusted)
+    }
   },
-  "include": [
-    "src"
+  "include": ["src/**/*"                                      // Include all files under the src directory
   ]
 }
