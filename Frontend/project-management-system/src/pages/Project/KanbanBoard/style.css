@@ -1,0 +1,16 @@
+/* KanbanBoard container */
+.p-4 {
+    padding: 16px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    gap: 16px;
+  }
+  
+  .gap-8 {
+    gap: 32px; /* Adjust the gap between columns */
+  }
+  
+  

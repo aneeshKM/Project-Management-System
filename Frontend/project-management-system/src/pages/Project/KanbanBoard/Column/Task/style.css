@@ -1,0 +1,31 @@
+/* Task Styling */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rounded-lg {
+    border-radius: 8px;
+  }
+  
+  .bg-neutral-700 {
+    background-color: #72819d;
+  }
+  
+  .p-4 {
+    padding: 16px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 16px;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-neutral-100 {
+    color: #f7fafc;
+  }
+  
+  
