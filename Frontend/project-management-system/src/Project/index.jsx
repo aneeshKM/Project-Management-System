@@ -39,23 +39,8 @@ const Project = () => {
 
   return (
     <ProjectPage>
-      <NavbarLeft
-        issueSearchModalOpen={issueSearchModalHelpers.open}
-        issueCreateModalOpen={issueCreateModalHelpers.open}
-      />
-
       <Sidebar project={project} />
 
-      {issueSearchModalHelpers.isOpen() && (
-        <Modal
-          isOpen
-          testid="modal:issue-search"
-          variant="aside"
-          width={600}
-          onClose={issueSearchModalHelpers.close}
-          renderContent={() => <IssueSearch project={project} />}
-        />
-      )}
 
       {issueCreateModalHelpers.isOpen() && (
         <Modal

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, useRouteMatch } from 'react-router-dom';
+import { createQueryParamModalHelpers } from 'shared/utils/queryParamModal';
+import { useHistory } from 'react-router-dom';
 
 import { ProjectCategoryCopy } from 'shared/constants/projects';
 import { Icon, ProjectAvatar } from 'shared/components';
@@ -21,8 +23,12 @@ const propTypes = {
   project: PropTypes.object.isRequired,
 };
 
+// const history = useHistory();
+
+
 const ProjectSidebar = ({ project }) => {
   const match = useRouteMatch();
+  const issueCreateModalHelpers = createQueryParamModalHelpers('issue-create');
 
   return (
     <Sidebar>
@@ -36,12 +42,10 @@ const ProjectSidebar = ({ project }) => {
 
       {renderLinkItem(match, 'Kanban Board', 'board', '/board')}
       {renderLinkItem(match, 'Project settings', 'settings', '/settings')}
-      <Divider />
-      {renderLinkItem(match, 'Releases', 'shipping')}
-      {renderLinkItem(match, 'Issues and filters', 'issues')}
-      {renderLinkItem(match, 'Pages', 'page')}
-      {renderLinkItem(match, 'Reports', 'reports')}
-      {renderLinkItem(match, 'Components', 'component')}
+      <LinkItem as="div" onClick={issueCreateModalHelpers.open}>
+        <Icon type="issues" />
+        <LinkText>Create Issue</LinkText>
+    </LinkItem>
     </Sidebar>
   );
 };
@@ -57,11 +61,13 @@ const renderLinkItem = (match, text, iconType, path) => {
     <LinkItem {...linkItemProps}>
       <Icon type={iconType} />
       <LinkText>{text}</LinkText>
-      {!isImplemented && <NotImplemented>Not implemented</NotImplemented>}
+      {/* {!isImplemented && <NotImplemented>Not implemented</NotImplemented>} */}
     </LinkItem>
+    
   );
 };
 
 ProjectSidebar.propTypes = propTypes;
 
 export default ProjectSidebar;
+

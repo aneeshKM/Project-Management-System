@@ -48,14 +48,19 @@ export const Divider = styled.div`
   border-top: 1px solid ${color.borderLight};
 `;
 
+// Previous conditional style logic based on props.to:
+// const conditionalStyle = props => used dollar{props} actually
+//   !props.to ? 'cursor: not-allowed;' : `&:hover { background: ${color.backgroundLight}; }`;
+
+
 export const LinkItem = styled.div`
   position: relative;
   display: flex;
   padding: 8px 12px;
   border-radius: 3px;
   ${mixin.clickable}
-  ${props =>
-    !props.to ? `cursor: not-allowed;` : `&:hover { background: ${color.backgroundLight}; }`}
+  
+  &:hover { background: ${color.backgroundLight}; }
   i {
     margin-right: 15px;
     font-size: 20px;
