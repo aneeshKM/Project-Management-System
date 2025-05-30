@@ -22,6 +22,14 @@ module.exports = {
         use: ['style-loader', { loader: 'css-loader' }],
       },
       {
+        test: /\.s[ac]ss$/i,                // .sass or .scss
+        use: [
+          'style-loader',                   // 3. injects <style>
+          'css-loader',                     // 2. turns CSS into CommonJS
+          'sass-loader',                    // 1. compiles Sass → CSS
+        ],
+      },
+      {
         test: /\.(jpe?g|png|gif|woff2?|eot|ttf|otf|svg)$/,
         use: [
           {

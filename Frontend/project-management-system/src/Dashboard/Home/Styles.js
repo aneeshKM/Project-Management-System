@@ -23,7 +23,15 @@ export const Card = styled.div`
     `}
 `;
 
-export const Title = styled.p`
+export const PTitle = styled.p`
+  padding-bottom: 11px;
+  ${font.size(20)}
+  @media (max-width: 1100px) {
+    ${font.size(18.5)}
+  }
+`;
+
+export const TDescription = styled.p`
   padding-bottom: 11px;
   ${font.size(15)}
   @media (max-width: 1100px) {

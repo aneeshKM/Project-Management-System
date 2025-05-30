@@ -1,13 +1,14 @@
 import { LogoLink } from "Navbar/Styles";
 import React from "react";
-import { Card, Title } from "./Styles";
+import { Card, TDescription, PTitle } from "./Styles";
 
 
 const Home = () =>{
     return(
         <LogoLink to="/dashboard/project">
         <Card>
-            <Title>Project 1</Title>
+            <PTitle>Project 1</PTitle>
+            <TDescription>This is first project based on jira</TDescription>
         </Card>
         </LogoLink>
     );

@@ -10,14 +10,15 @@ import ProjectSettings from 'Project/ProjectSettings';
 import Dashboard from 'Dashboard';
 import CreateProject from 'CreateProject';
 import NavbarLeft from 'Navbar';
+import LoginForm from 'LoginPage/Login';
 
 const Routes = () => (
   <Router history={history}>
+    <Route path ="/login" component={LoginForm}/>
     <NavbarLeft></NavbarLeft>
     <Switch>
       <Redirect exact from="/" to="/dashboard" />
-
-      <Route path="/authenticate" component={Authenticate} />
+      {/* <Route path="/authenticate" component={Authenticate} /> */}
       <Route path="/dashboard/create" component={CreateProject} />
       <Route path="/dashboard/project" component={Project} />
       <Route path="/dashboard" component={Dashboard} />

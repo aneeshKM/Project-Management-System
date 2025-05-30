@@ -5,8 +5,8 @@ import BaseStyles from './BaseStyles';
 import Toast from './Toast';
 import Routes from './Routes';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 // We're importing .css because @font-face in styled-components causes font files
 // to be constantly re-requested from the server (which causes screen flicker)

@@ -1,0 +1,49 @@
+/* shared/components/Button/Button.scss */
+
+$btn-height: 32px;
+
+/* base --------------------------------------------------------------- */
+.pms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $btn-height;
+  vertical-align: middle;
+  line-height: 1;
+  padding: 0 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+
+  &--icon-only { padding: 0 9px; }
+
+  &--spinner {                 // tweaks the custom Spinner
+    position: relative;
+    top: 1px;
+  }
+
+  &__text {                    // wraps children text
+    padding-left: 0;
+
+    &--with-padding { padding-left: 7px; }
+  }
+
+  &:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+}
+
+/* extra styling for the custom "empty" variant ---------------------- */
+.pms-btn-empty {
+  background: #fff;
+  color: #172b4d;                    /* ≈ color.textDark */
+  
+  &:not(:disabled) {
+    &:hover   { background: #f4f5f7; }
+    &:active,
+    &.active  {
+      color: #0052cc;                /* ≈ color.primary   */
+      background: rgba(179,212,255,.6);
+    }
+  }
+}

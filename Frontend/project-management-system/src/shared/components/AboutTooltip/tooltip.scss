@@ -1,0 +1,29 @@
+// feedback.scss
+
+// Variables
+$paragraph-font-size: 15px;
+$paragraph-margin-bottom: 12px;
+$paragraph-last-margin-bottom: 22px;
+
+
+#feedback-dropdown {
+  padding: 16px 24px 24px;
+
+  #feedback-image-cont {
+    padding: 24px 56px 20px;
+
+    #feedback-image {
+      width: 100%;
+    }
+  }
+
+  /* <- CHANGED FROM #feedback-paragraph */
+  .feedback-paragraph {
+    margin-bottom: $paragraph-margin-bottom;
+    font-size: $paragraph-font-size;
+
+    &:last-of-type {
+      margin-bottom: $paragraph-last-margin-bottom;
+    }
+  }
+}
